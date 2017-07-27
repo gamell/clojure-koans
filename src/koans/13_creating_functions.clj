@@ -32,5 +32,5 @@
           (double-dec 10)))
 
   "Be careful about the order in which you mix your functions"
-  (= 99 (let [square-and-dec dec square]
+  (= 99 (let [square-and-dec (comp dec square)]
           (square-and-dec 10))))
